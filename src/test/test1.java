@@ -7,10 +7,13 @@ public class test1 {
 
     public static void transformArray() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("<Initializing test1>");
         System.out.print("Size of array : ");
+
         int n = scanner.nextInt();
         int[] inputArray = new int[n];
+
         System.out.println("Enter " + n + " numbers :");
 
         for(int i = 0; i < n; ++i) {
@@ -18,12 +21,15 @@ public class test1 {
         }
 
         scanner.close();
+
         int[] output = changeArray(inputArray);
+
         System.out.println("Input : " + Arrays.toString(inputArray));
         System.out.println("Output : " + Arrays.toString(output));
     }
 
     public static int[] changeArray(int[] arr) {
+
         int n = arr.length;
         int[] newArr = new int[n];
 

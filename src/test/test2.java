@@ -6,20 +6,22 @@ import java.util.Scanner;
 public class test2 {
     public static void bitcoinPrices() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("<Initializing test2>");
         System.out.print("Size of day : ");
+
         int n = scanner.nextInt();
         int[] prices = new int[n];
+
         System.out.println("Enter " + n + " prices:");
 
-        int result;
-        for(result = 0; result < n; ++result) {
-            prices[result] = scanner.nextInt();
+        for(int i = 0; i < n; ++i) {
+            prices[i] = scanner.nextInt();
         }
 
-        result = maxProfit(prices);
         System.out.println("Imput: " + Arrays.toString(prices));
-        System.out.println("Output: " + result);
+        System.out.println("Output: " + maxProfit(prices));
+
         scanner.close();
     }
 
